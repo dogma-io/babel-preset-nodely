@@ -1,0 +1,84 @@
+{
+  "name": "babel-preset-nodely",
+  "version": "0.0.0",
+  "description": "Babel preset used by nodely.",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "nodely -s ./src -o ./lib -v && npm run gen-types",
+    "gen-types": "flow gen-flow-files src --ignore \".+/__tests__/.+\" --out-dir lib",
+    "postpublish": "codecov",
+    "prepublishOnly": "npm run build",
+    "test": "lintly src && flow && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dogma-io/babel-preset-nodely.git"
+  },
+  "keywords": [
+    "babel",
+    "es2015",
+    "es6",
+    "flow",
+    "flowjs",
+    "modules",
+    "node",
+    "nodely",
+    "plugin",
+    "preset",
+    "transpile",
+    "transpiler"
+  ],
+  "author": "Matthew Dahl <https://github.com/dogma-io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dogma-io/babel-preset-nodely/issues"
+  },
+  "homepage": "https://github.com/dogma-io/babel-preset-nodely#readme",
+  "devDependencies": {
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "23.0.1",
+    "codecov": "3.0.2",
+    "flow-bin": "0.73.0",
+    "jest": "23.0.1",
+    "jest-serializer-path": "0.1.15",
+    "lintly": "0.2.0",
+    "nodely": "0.4.0"
+  },
+  "dependencies": {
+    "@babel/core": "7.0.0-beta.49",
+    "@babel/plugin-proposal-class-properties": "7.0.0-beta.49",
+    "@babel/plugin-syntax-object-rest-spread": "7.0.0-beta.49",
+    "@babel/preset-env": "7.0.0-beta.49",
+    "@babel/preset-flow": "7.0.0-beta.49",
+    "@babel/preset-react": "7.0.0-beta.49",
+    "freezly": "^2.0.0"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "snapshotSerializers": [
+      "jest-serializer-path"
+    ],
+    "testRegex": "/__tests__/.*-test\\.js$"
+  }
+}
