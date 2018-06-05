@@ -2,24 +2,12 @@
  * @flow
  */
 
-import {deepFreeze} from 'freezly'
-
-type Environment = 'node' | 'web'
-
 type Options = {|
-  env?: Environment,
+  targets?: Object, // eslint-disable-line
 |}
 
 type Plugin = string
 type Preset = string | [string, Object] // eslint-disable-line flowtype/no-weak-types
-
-const NODE_TARGETS = deepFreeze({
-  node: '6',
-})
-
-const WEB_TARGETS = deepFreeze({
-  browsers: ['last 2 versions', 'ie 10'],
-})
 
 function getPlugins(): Array<Plugin> {
   return [
@@ -28,27 +16,21 @@ function getPlugins(): Array<Plugin> {
   ]
 }
 
-function getPresets(env: Environment): Array<Preset> {
-  return [
-    [
-      '@babel/env',
-      {
-        targets: env === 'web' ? WEB_TARGETS : NODE_TARGETS,
-      },
-    ],
-    '@babel/flow',
-    '@babel/react',
-  ]
+// eslint-disable-next-line
+function getPresets(targets: ?Object): Array<Preset> {
+  const env = targets ? ['@babel/env', {targets}] : '@babel/env'
+
+  return [env, '@babel/flow', '@babel/react']
 }
 
 // eslint-disable-next-line flowtype/no-weak-types
 module.exports = function(api: any, options: ?Options): Object {
-  const env = (options && options.env) || 'node'
+  const targets = (options && options.targets) || null
 
   api.cache.never()
 
   return {
     plugins: getPlugins(),
-    presets: getPresets(env),
+    presets: getPresets(targets),
   }
 }

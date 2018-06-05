@@ -1,27 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`babel-preset-nodely when env is node should provide expected config 1`] = `
-Object {
-  "plugins": Array [
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-syntax-object-rest-spread",
-  ],
-  "presets": Array [
-    Array [
-      "@babel/env",
-      Object {
-        "targets": Object {
-          "node": "6",
-        },
-      },
-    ],
-    "@babel/flow",
-    "@babel/react",
-  ],
-}
-`;
-
-exports[`babel-preset-nodely when env is web should provide expected config 1`] = `
+exports[`babel-preset-nodely when browser targets passed in should provide expected config 1`] = `
 Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",
@@ -34,7 +13,7 @@ Object {
         "targets": Object {
           "browsers": Array [
             "last 2 versions",
-            "ie 10",
+            "ie10",
           ],
         },
       },
@@ -46,6 +25,20 @@ Object {
 `;
 
 exports[`babel-preset-nodely when no options provided should provide expected config 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-syntax-object-rest-spread",
+  ],
+  "presets": Array [
+    "@babel/env",
+    "@babel/flow",
+    "@babel/react",
+  ],
+}
+`;
+
+exports[`babel-preset-nodely when node targets passed in should provide expected config 1`] = `
 Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",

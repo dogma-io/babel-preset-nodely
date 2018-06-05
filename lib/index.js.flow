@@ -1,5 +1,4 @@
 // @flow
 
-import {deepFreeze} from "freezly";
 
-declare module.exports: (api: any, options: ?$Exact<{env?: "node" | "web"}>) => Object;
+declare module.exports: (api: any, options: ?$Exact<{targets?: Object}>) => Object;
