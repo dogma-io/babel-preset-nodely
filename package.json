@@ -42,7 +42,7 @@
     "babel-jest": "23.0.1",
     "codecov": "3.0.2",
     "flow-bin": "0.73.0",
-    "jest": "23.0.1",
+    "jest": "23.1.0",
     "jest-serializer-path": "0.1.15",
     "lintly": "0.2.0",
     "nodely": "0.5.1"
@@ -53,11 +53,7 @@
     "@babel/plugin-syntax-object-rest-spread": "7.0.0-beta.49",
     "@babel/preset-env": "7.0.0-beta.49",
     "@babel/preset-flow": "7.0.0-beta.49",
-    "@babel/preset-react": "7.0.0-beta.49",
-    "freezly": "^2.0.0"
-  },
-  "engines": {
-    "node": ">= 6"
+    "@babel/preset-react": "7.0.0-beta.49"
   },
   "jest": {
     "collectCoverage": true,

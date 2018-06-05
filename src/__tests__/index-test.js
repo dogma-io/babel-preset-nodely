@@ -31,11 +31,15 @@ describe('babel-preset-nodely', () => {
     })
   })
 
-  describe('when env is node', () => {
+  describe('when node targets passed in', () => {
     let result
 
     beforeEach(() => {
-      result = preset(api, {env: 'node'})
+      result = preset(api, {
+        targets: {
+          node: '6',
+        },
+      })
     })
 
     it('should never cache config', () => {
@@ -47,11 +51,15 @@ describe('babel-preset-nodely', () => {
     })
   })
 
-  describe('when env is web', () => {
+  describe('when browser targets passed in', () => {
     let result
 
     beforeEach(() => {
-      result = preset(api, {env: 'web'})
+      result = preset(api, {
+        targets: {
+          browsers: ['last 2 versions', 'ie10'],
+        },
+      })
     })
 
     it('should never cache config', () => {
