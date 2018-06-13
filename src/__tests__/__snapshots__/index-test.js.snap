@@ -4,6 +4,7 @@ exports[`babel-preset-nodely when browser targets passed in should provide expec
 Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-object-rest-spread",
   ],
   "presets": Array [
@@ -28,6 +29,7 @@ exports[`babel-preset-nodely when no options provided should provide expected co
 Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-object-rest-spread",
   ],
   "presets": Array [
@@ -42,6 +44,7 @@ exports[`babel-preset-nodely when node targets passed in should provide expected
 Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-object-rest-spread",
   ],
   "presets": Array [

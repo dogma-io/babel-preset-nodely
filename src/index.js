@@ -12,6 +12,7 @@ type Preset = string | [string, Object] // eslint-disable-line flowtype/no-weak-
 function getPlugins(): Array<Plugin> {
   return [
     '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-syntax-object-rest-spread',
   ]
 }
