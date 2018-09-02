@@ -1,3 +1,8 @@
+# 0.3.0 (2018-09-02)
+
+*   Upgrade dependencies (stop using Babel 7 beta and use Babel 7 official release)
+
+
 # 0.2.0 (2018-06-13)
 
 *   Added optional chaining plugin.
