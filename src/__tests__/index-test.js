@@ -31,11 +31,64 @@ describe('babel-preset-nodely', () => {
     })
   })
 
+  describe('when loose is set to true', () => {
+    let result
+
+    beforeEach(() => {
+      result = preset(api, {loose: true})
+    })
+
+    it('should never cache config', () => {
+      expect(api.cache.never).toHaveBeenCalled()
+    })
+
+    it('should provide expected config', () => {
+      expect(result).toMatchSnapshot()
+    })
+  })
+
+  describe('when loose is set to false', () => {
+    let result
+
+    beforeEach(() => {
+      result = preset(api, {loose: false})
+    })
+
+    it('should never cache config', () => {
+      expect(api.cache.never).toHaveBeenCalled()
+    })
+
+    it('should provide expected config', () => {
+      expect(result).toMatchSnapshot()
+    })
+  })
+
   describe('when node targets passed in', () => {
     let result
 
     beforeEach(() => {
       result = preset(api, {
+        targets: {
+          node: '6',
+        },
+      })
+    })
+
+    it('should never cache config', () => {
+      expect(api.cache.never).toHaveBeenCalled()
+    })
+
+    it('should provide expected config', () => {
+      expect(result).toMatchSnapshot()
+    })
+  })
+
+  describe('when node targets passed in and loose set to false', () => {
+    let result
+
+    beforeEach(() => {
+      result = preset(api, {
+        loose: false,
         targets: {
           node: '6',
         },
