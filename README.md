@@ -26,7 +26,68 @@ yarn add babel-preset-nodely
 
 ## Documentation
 
-…
+To use this preset simply include it in your Babel configuration for example:
+
+*.babelrc*
+
+```json
+{
+  "presets": ["nodely"]
+}
+```
+
+### Loose mode
+
+By default this preset will enable loose mode but you can turn it off like so:
+
+```json
+{
+  "presets": [
+    [
+      "nodely",
+      {
+        "loose": false
+      }
+    ]
+  ]
+}
+```
+
+### Targets
+
+Your build can target a specific minimum Node version:
+
+```json
+{
+  "presets": [
+    [
+      "nodely",
+      {
+        "targets": {
+          "node": 8
+        }
+      }
+    ]
+  ]
+}
+```
+
+Your build can also target certain browser support:
+
+```json
+{
+  "presets": [
+    [
+      "nodely",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "ie10"],
+        }
+      }
+    ]
+  ]
+}
+```
 
 ## Code of Conduct
 

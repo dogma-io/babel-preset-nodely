@@ -5,12 +5,14 @@ Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
   ],
   "presets": Array [
     Array [
       "@babel/env",
       Object {
+        "loose": true,
         "targets": Object {
           "browsers": Array [
             "last 2 versions",
@@ -25,15 +27,87 @@ Object {
 }
 `;
 
+exports[`babel-preset-nodely when loose is set to false should provide expected config 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-object-rest-spread",
+  ],
+  "presets": Array [
+    Array [
+      "@babel/env",
+      Object {
+        "loose": false,
+      },
+    ],
+    "@babel/flow",
+    "@babel/react",
+  ],
+}
+`;
+
+exports[`babel-preset-nodely when loose is set to true should provide expected config 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-object-rest-spread",
+  ],
+  "presets": Array [
+    Array [
+      "@babel/env",
+      Object {
+        "loose": true,
+      },
+    ],
+    "@babel/flow",
+    "@babel/react",
+  ],
+}
+`;
+
 exports[`babel-preset-nodely when no options provided should provide expected config 1`] = `
 Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
   ],
   "presets": Array [
-    "@babel/env",
+    Array [
+      "@babel/env",
+      Object {
+        "loose": true,
+      },
+    ],
+    "@babel/flow",
+    "@babel/react",
+  ],
+}
+`;
+
+exports[`babel-preset-nodely when node targets passed in and loose set to false should provide expected config 1`] = `
+Object {
+  "plugins": Array [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-object-rest-spread",
+  ],
+  "presets": Array [
+    Array [
+      "@babel/env",
+      Object {
+        "loose": false,
+        "targets": Object {
+          "node": "6",
+        },
+      },
+    ],
     "@babel/flow",
     "@babel/react",
   ],
@@ -45,12 +119,14 @@ Object {
   "plugins": Array [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
   ],
   "presets": Array [
     Array [
       "@babel/env",
       Object {
+        "loose": true,
         "targets": Object {
           "node": "6",
         },
