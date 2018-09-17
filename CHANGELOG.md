@@ -1,3 +1,11 @@
+# 0.4.0 (2018-09-17)
+
+*   **Added** documentation for usage and options
+*   **Added** `loose` option for disabling loose mode
+*   **Added** support for dynamic import syntax
+*   **Changed** builds to enable loose mode by default
+
+
 # 0.3.0 (2018-09-02)
 
 *   Upgrade dependencies (stop using Babel 7 beta and use Babel 7 official release)
