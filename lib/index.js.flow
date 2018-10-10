@@ -1,4 +1,4 @@
 // @flow
 
 
-declare module.exports: (api: any, options: ?$Exact<{targets?: Object}>) => Object;
+declare module.exports: (api: any, options: ?$Exact<{loose?: boolean, targets?: Object}>) => Object;
