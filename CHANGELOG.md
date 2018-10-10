@@ -1,3 +1,9 @@
+# 0.4.1 (2018-10-10)
+
+*   **Upgraded** development dependencies
+* **Fixed** build to have changes from [previous PR](https://github.com/dogma-io/babel-preset-nodely/pull/10)
+
+
 # 0.4.0 (2018-09-17)
 
 *   **Added** documentation for usage and options
