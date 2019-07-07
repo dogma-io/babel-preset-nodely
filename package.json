@@ -39,9 +39,9 @@
   "homepage": "https://github.com/dogma-io/babel-preset-nodely#readme",
   "devDependencies": {
     "babel-core": "^7.0.0-0",
-    "babel-jest": "^23.6.0",
-    "codecov": "^3.1.0",
-    "jest": "^23.6.0",
+    "babel-jest": "24.8.0",
+    "codecov": "3.5.0",
+    "jest": "24.8.0",
     "jest-serializer-path": "0.1.15",
     "lintly": "0.3.0",
     "nodely": "0.8.0"
