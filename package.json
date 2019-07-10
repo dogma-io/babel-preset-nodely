@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-nodely",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Babel preset used by nodely.",
   "main": "lib/index.js",
   "files": [
