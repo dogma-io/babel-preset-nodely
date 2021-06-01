@@ -3,7 +3,12 @@
 exports[`babel-preset-nodely when browser targets passed in should provide expected config 1`] = `
 Object {
   "plugins": Array [
-    "@babel/plugin-proposal-class-properties",
+    Array [
+      "@babel/plugin-proposal-class-properties",
+      Object {
+        "loose": true,
+      },
+    ],
     "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
@@ -30,7 +35,12 @@ Object {
 exports[`babel-preset-nodely when loose is set to false should provide expected config 1`] = `
 Object {
   "plugins": Array [
-    "@babel/plugin-proposal-class-properties",
+    Array [
+      "@babel/plugin-proposal-class-properties",
+      Object {
+        "loose": false,
+      },
+    ],
     "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
@@ -51,7 +61,12 @@ Object {
 exports[`babel-preset-nodely when loose is set to true should provide expected config 1`] = `
 Object {
   "plugins": Array [
-    "@babel/plugin-proposal-class-properties",
+    Array [
+      "@babel/plugin-proposal-class-properties",
+      Object {
+        "loose": true,
+      },
+    ],
     "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
@@ -72,7 +87,12 @@ Object {
 exports[`babel-preset-nodely when no options provided should provide expected config 1`] = `
 Object {
   "plugins": Array [
-    "@babel/plugin-proposal-class-properties",
+    Array [
+      "@babel/plugin-proposal-class-properties",
+      Object {
+        "loose": true,
+      },
+    ],
     "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
@@ -93,7 +113,12 @@ Object {
 exports[`babel-preset-nodely when node targets passed in and loose set to false should provide expected config 1`] = `
 Object {
   "plugins": Array [
-    "@babel/plugin-proposal-class-properties",
+    Array [
+      "@babel/plugin-proposal-class-properties",
+      Object {
+        "loose": false,
+      },
+    ],
     "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
@@ -117,7 +142,12 @@ Object {
 exports[`babel-preset-nodely when node targets passed in should provide expected config 1`] = `
 Object {
   "plugins": Array [
-    "@babel/plugin-proposal-class-properties",
+    Array [
+      "@babel/plugin-proposal-class-properties",
+      Object {
+        "loose": true,
+      },
+    ],
     "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-object-rest-spread",
