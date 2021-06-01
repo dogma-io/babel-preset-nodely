@@ -1,6 +1,6 @@
 /* eslint-disable comma-dangle, prettier/prettier */
 
-module.exports = {
+export default {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.js'],
   coverageReporters: ['json-summary', 'lcov'],

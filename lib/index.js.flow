@@ -7,12 +7,14 @@ type Options = {|
   targets?: Object, // eslint-disable-line
 |}
 
-type Plugin = string
+type Plugin = string | Array<string | Object> // eslint-disable-line flowtype/no-weak-types
 type Preset = string | [string, Object] // eslint-disable-line flowtype/no-weak-types
 
-function getPlugins(): Array<Plugin> {
+function getPlugins(options: Options): Array<Plugin> {
+  const loose = typeof options.loose === 'boolean' ? options.loose : true
+
   return [
-    '@babel/plugin-proposal-class-properties',
+    ['@babel/plugin-proposal-class-properties', {loose}],
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-syntax-dynamic-import',
     '@babel/plugin-syntax-object-rest-spread',
@@ -36,7 +38,7 @@ module.exports = function(api: any, options: ?Options): Object {
   api.cache.never()
 
   return {
-    plugins: getPlugins(),
+    plugins: getPlugins(options || {loose: true}),
     presets: getPresets(options || {loose: true}),
   }
 }
